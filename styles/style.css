@@ -13,4 +13,78 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  margin-block-start: 100px;
+}
+
+.header {
+  min-block-size: 327px;
+  border: var(--border-default);
+  font-family: "PressStart2P", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.header_title {
+  margin-block-start: 18px;
+  font-size: clamp(0.875rem, 0.4423rem + 1.8462vw, 23px);
+}
+.content {
+  min-inline-size: 375px;
+  min-block-size: 327px;
+  background-color: #fff;
+  border: var(--border-default);
+  margin-bottom: 50px;
+}
+
+.image-container {
+  position: relative;
+  /* display: inline-block; */
+  /* width: 100%; */
+  /* border: var(--border-default); */
+  width: 371px;
+  height: 371px;
+}
+
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  object-position: right;
+}
+
+.overlay_logo{        /* лого html */
+  position: absolute;
+  top: 8%;
+  right: 7%;
+  color: #000;
+  font-family: "PressStart2P", sans-serif;
+  font-size: 15px;
+  background-image: url(/svg/watermark.svg);
+  
+
+}
+
+.content_title {
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-weight: 700;
+  padding: 4px 10px;
+}
+
+.content_text {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family);
+  font-size: 18px;
+  padding: 30px 25px 88px 25px;
+}
+
+.learning_notes {
+  padding-top: 25px;
 }
