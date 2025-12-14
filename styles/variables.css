@@ -1,12 +1,25 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
-:root{
---font-family:"Inter-Variable",sans-serif;
+:root {
+  --font-family: "Inter-Variable", sans-serif;
+  --font-heading: "PressStart2P", sans-serif;
+  --font-variation-settings: 400;
 
---complex-gradient: 
-    repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
+  --complex-gradient: repeating-linear-gradient(
+      to right,
+      #d3d3d3 0 2px,
+      transparent 2px 4px
+    ),
     repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
 
---border-default: 2px solid #000;
+  --border-default: 2px solid #000;
+  --filter-invert: solid 2px #fff;
+
+  --header-container-width: clamp(375px, 50vw, 700px);
+  --header-container-height: clamp(327px, 45vh, 368px);
+
+  --stroke-color: #fff;
+  --contour-color: #000;
+  --animation-fill-color: #ff0000;
 }
