@@ -13,7 +13,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  margin-block-start: -55px;
+  margin-top: 95px;
   background-image: var(--complex-gradient);
   background-size: cover;
   background-attachment: fixed;
@@ -35,12 +35,12 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
-  margin-bottom: 101px;
+  margin-bottom: 103px;
 }
 
 .header__title {
   font-family: var(--font-heading);
-  font-weight: var(--font-variation-settings);
+  font-variation-settings: "wght" var(--font-weight);
   font-size: 49px;
 }
 
@@ -55,15 +55,16 @@
   justify-content: center;
   background-color: var(--stroke-color);
   border: var(--border-default);
-  margin-bottom: 52px;
+  margin-bottom: 51px;
 }
 
 .content_title {
   font-family: var(--font-family);
+  font-variation-settings: "wght" var(--font-weight);
   font-size: 18px;
-  font-weight: 700;
   padding: 4px 10px;
 }
+
 .image-container {
   display: block;
   min-height: 371px;
@@ -81,7 +82,7 @@
 
 /* Фильтры */
 .filter_brightness {
-  filter: brightness(1.1);
+  filter: brightness(1.2);
 }
 
 .filter_multiple {
@@ -147,7 +148,7 @@
 .content_text {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  margin-bottom: 25px;
 }
 
 button {
@@ -167,7 +168,7 @@ button {
   box-shadow: none;
   transition: box-shadow 0.3s ease;
 }
-button:focus {
+button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--contour-color);
 }
 
@@ -186,15 +187,14 @@ button:focus {
 
 .buttons {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  padding: 3px 26px 21px 0px;
-  gap: 5px;
+  justify-content: end;
+  padding: 0px 25px 24px;
+  gap: 7px;
 }
 
 .like-icon {
-  display: inline-block;
-  transform-origin: center;
+  display: flex;
+  align-self: center;
 }
 
 .contour   /* контур сердца */ {
@@ -270,7 +270,6 @@ button:focus {
   max-inline-size: 357px;
   inline-size: 100%;
   margin: auto;
-  overflow-x: hidden;
 }
 
 dialog[open] {
@@ -278,11 +277,10 @@ dialog[open] {
   position: fixed;
   z-index: 1;
   width: 341px;
-  height: 191px;
 }
 
 dialog::backdrop {
-  background-color: rgb(0 0 0 / 0.7);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .dialog__title {
@@ -300,6 +298,7 @@ dialog::backdrop {
   overflow: hidden;
   width: 261px;
   height: 38px;
+  margin-bottom: 30px;
 }
 
 .dialog__content {
