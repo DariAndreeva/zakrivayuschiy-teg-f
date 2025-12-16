@@ -262,6 +262,10 @@ button:focus-visible {
   z-index: 1;
 }
 
+.dialog .floppy-button {
+  inline-size: 39px;
+}
+
 .dialog {
   display: none;
   padding: 0;
