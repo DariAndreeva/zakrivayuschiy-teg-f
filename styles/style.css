@@ -13,7 +13,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  margin-top: 95px;
+  margin-top: 100px;
   background-image: var(--complex-gradient);
   background-size: cover;
   background-attachment: fixed;
@@ -24,24 +24,24 @@
 }
 
 .header {
-  height: var(--header-container-height);
+  min-height: var(--header-container-height);
   width: var(--header-container-width);
   border: var(--border-default);
   font-family: var(--font-heading);
-  font-weight: var(--font-variation-settings);
+  font-weight: var(--font-weight);
   background-color: var(--stroke-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  margin-bottom: 103px;
+  gap: 25px;
+  margin-bottom: 100px;
 }
 
 .header__title {
   font-family: var(--font-heading);
   font-variation-settings: "wght" var(--font-weight);
-  font-size: 49px;
+  font-size: var(--header-title-font-size);
 }
 
 .header__subtitle {
@@ -55,7 +55,7 @@
   justify-content: center;
   background-color: var(--stroke-color);
   border: var(--border-default);
-  margin-bottom: 51px;
+  margin-bottom: 47px;
 }
 
 .content_title {
@@ -141,6 +141,7 @@
 
 .article {
   font-family: var(--font-family);
+  font-weight: 410;
   font-size: 18px;
   padding: 25px;
 }
@@ -175,7 +176,8 @@ button:focus-visible {
 .button::before {
   content: "";
   position: absolute;
-  background-color: var(--contour-color);
+  mix-blend-mode: difference;
+  background-color: var(--stroke-color);
   translate: -100% 0%;
   inset: 0px;
   transition: translate 0.5s ease-in-out;
@@ -223,16 +225,18 @@ button:focus-visible {
   position: relative;
   overflow: hidden;
 }
+.card__icon-button:focus-visible {
+  box-shadow: none;
+  border: 2px solid var(--contour-color);
+}
 
 .button__text {
   line-height: 50%;
   font-family: var(--font-heading);
   letter-spacing: 1px;
-  font-weight: var(--font-variation-settings);
+  font-weight: 410;
   font-size: 13px;
   letter-spacing: 1px;
-  mix-blend-mode: difference;
-  color: var(--stroke-color);
 }
 
 .button-container {
@@ -243,8 +247,8 @@ button:focus-visible {
 }
 
 .button_type_save {
-  width: 304px;
-  height: 84px;
+  width: 331px;
+  height: 56px;
   border: var(--border-default);
   background-color: var(--stroke-color);
   position: relative;
@@ -252,18 +256,13 @@ button:focus-visible {
 }
 
 .floppy-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  inline-size: 21px;
-  color: var(--stroke-color);
-  block-size: auto;
-  position: relative;
-  z-index: 1;
+  height: 21px;
+  width: 21px;
 }
 
 .dialog .floppy-button {
-  inline-size: 39px;
+  height: 39px;
+  width: 39px;
 }
 
 .dialog {
@@ -271,7 +270,7 @@ button:focus-visible {
   padding: 0;
   border: var(--border-default);
   background-color: var(--stroke-color);
-  max-inline-size: 357px;
+  /* max-inline-size: 357px; */
   inline-size: 100%;
   margin: auto;
 }
@@ -289,7 +288,6 @@ dialog::backdrop {
 
 .dialog__title {
   font-family: var(--font-heading);
-  font-weight: var(--font-variation-settings);
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
@@ -319,6 +317,21 @@ dialog::backdrop {
 }
 
 @media (width <= 375px) {
+  .page {
+    /* margin-top: 92px; */
+    margin-bottom: 95px;
+  }
+  .header {
+    gap: 20px;
+  }
+
+  .header__title {
+    font-size: 50px;
+    /* margin-bottom: 20px; */
+  }
+  .content {
+    margin-bottom: 51px;
+  }
   .floppy-button {
     inline-size: 28px;
   }
@@ -326,10 +339,24 @@ dialog::backdrop {
   .dialog {
     max-inline-size: 341px;
   }
+  .dialog__content {
+    min-height: 191px;
+  }
 
   .button_type_save {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    height: 84px;
+    width: 306px;
+  }
+
+  .button-container {
+    margin: 0;
+  }
+
+  .floppy-button {
+    height: 28px;
+    width: 28px;
   }
 }

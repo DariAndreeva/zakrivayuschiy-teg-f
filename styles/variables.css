@@ -3,8 +3,8 @@
 :root {
   --font-family: "Inter-Variable", sans-serif;
   --font-heading: "PressStart2P", sans-serif;
-  /* --font-variation-settings: 400; */
-  --font-weight: 700;
+  --font-variation-settings: 715;
+  --font-weight: 715;
 
   --complex-gradient: repeating-linear-gradient(
       to right,
@@ -19,6 +19,7 @@
 
   --header-container-width: clamp(375px, 50vw, 700px);
   --header-container-height: clamp(327px, 45vh, 368px);
+  --header-title-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 
   --stroke-color: #fff;
   --contour-color: #000;

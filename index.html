@@ -526,7 +526,7 @@
           type="button"
           onclick="window['save-dialog'].showModal()"
         >
-          <svg class="floppy-button" width="39" height="39" viewBox="0 0 39 39">
+          <svg class="floppy-button">
             <use href="./svg/save_icon.svg#floppy" />
           </svg>
           <span class="button__text">Сохранить на память</span>
@@ -537,13 +537,10 @@
     <dialog class="dialog" id="save-dialog">
       <div class="dialog__content">
         <div class="dialog__text">
-          <svg class="floppy-button" width="39" height="39" viewBox="0 0 39 39">
+          <svg class="floppy-button">
             <use href="./svg/save_icon.svg#floppy" />
           </svg>
-          <h2 class="dialog__title">
-            Вставьте <br />
-            дискету, чтобы продолжить
-          </h2>
+          <h2 class="dialog__title">Вставьте дискету, чтобы продолжить</h2>
         </div>
         <button
           class="button button_type_ok"
