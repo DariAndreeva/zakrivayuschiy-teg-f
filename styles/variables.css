@@ -3,8 +3,12 @@
 :root {
   --font-family: "Inter-Variable", sans-serif;
   --font-heading: "PressStart2P", sans-serif;
-  --font-variation-settings: 715;
-  --font-weight: 715;
+  --font-variation-settings: 400;
+  --font-weight: 400;
+
+  --font-middle: 410;
+
+  --font-big: 715;
 
   --complex-gradient: repeating-linear-gradient(
       to right,
